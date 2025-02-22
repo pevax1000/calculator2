@@ -36,26 +36,85 @@ plus.addEventListener('click', (event) => {
         num2 = parseInt(tempnum.join(""))
         tempnum = []
     }
-    
     console.log(num1),
     (event)
 })
+
+const multiply = document.querySelector("#multiply")
+multiply.addEventListener('click', (event) => {
+    operator = "X"
+    if (num1 == 0) {
+    num1 = parseInt(tempnum.join(""))
+    tempnum = []
+    }
+    else {
+        num2 = parseInt(tempnum.join(""))
+        tempnum = []
+    }
+    console.log(num1),
+    (event)
+})
+
+const subtract = document.querySelector("#subtract")
+subtract.addEventListener('click', (event) => {
+    operator = "-"
+    if (num1 == 0) {
+    num1 = parseInt(tempnum.join(""))
+    tempnum = []
+    }
+    else {
+        num2 = parseInt(tempnum.join(""))
+        tempnum = []
+    }
+    console.log(num1),
+    (event)
+})
+
+const divide = document.querySelector("#divide")
+divide.addEventListener('click', (event) => {
+    operator = "%"
+    if (num1 == 0) {
+    num1 = parseInt(tempnum.join(""))
+    tempnum = []
+    }
+    else {
+        num2 = parseInt(tempnum.join(""))
+        tempnum = []
+    }
+    console.log(num1),
+    (event)
+})
+
 
 const equals = document.querySelector("#equals")
 equals.addEventListener("click", operate)
 
 function operate() {
     num2 = parseInt(tempnum.join(""))
-
     console.log(operator)
-     if (operator === "+") {
+
+    if (operator === "+") {
     result = num1 + num2
     console.log(result)
     display.textContent = result
     }
-    else {
-     console.log("notplus")
-    }
+    else if (operator === "X") {
+        result = num1 * num2
+        console.log(result)
+        display.textContent = result
+        }
+    else if (operator === "-") {
+        result = num1 - num2
+        console.log(result)
+        display.textContent = result
+        }
+
+     else if (operator === "%") {
+            result = num1 / num2
+            console.log(result)
+            display.textContent = result
+            }
+
     tempnum = []
     num1 = result
 }
