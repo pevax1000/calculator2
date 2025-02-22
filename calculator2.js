@@ -48,7 +48,6 @@ function operate() {
     num2 = parseInt(tempnum.join(""))
 
     console.log(operator)
-
      if (operator === "+") {
     result = num1 + num2
     console.log(result)
@@ -61,16 +60,16 @@ function operate() {
     num1 = result
 }
 
-// function clear() {
-//     num1 = 0
-//     num2 = 0
-//     display = 0
-//     combine = 0
-//     tempnum1 = []
-//     currentoperator = " "
-//     console.log(display)
+const clearnow = document.querySelector("#clear")
+clearnow.addEventListener("click", clear)
 
-// }
+function clear() {
+    num1 = 0
+    num2 = 0
+    display.textContent = "0"
+    tempnum = []
+    currentoperator = " "
+}
 
 
 
