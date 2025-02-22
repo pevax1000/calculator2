@@ -1,6 +1,97 @@
-button {
+/* Main container for the calculator */
+#container {
     display: flex;
-    flex-direction: row;
-    background-color: aqua;
-    gap: 12pxs
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 500px;
+    background-color: rgb(17, 18, 18);
+    border-radius: 16px;
+    padding: 20px;
+    gap: 10px;
+}
+
+/* Display screen */
+#display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    background-color: rgb(197, 188, 188);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Wrapper for numbers and operators */
+#buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Numbers Grid */
+#number-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    gap: 4px;
+    margin: 0;
+    width: 70%;
+}
+
+/* Number buttons */
+#number-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Operators aligned in a column */
+#operatorsandmore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 25%;
+}
+
+/* Operator buttons */
+#operatorsandmore button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: lightgray;
+}
+
+/* Style for the equal and clear buttons */
+#equals {
+    background-color: rgb(28, 156, 65);
+}
+
+#clear {
+    background-color: rgb(200, 50, 50);
 }

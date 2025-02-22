@@ -100,16 +100,22 @@ function operate() {
     result = num1 + num2
     console.log(result)
     display.textContent = result
+    tempnum = []
+    num1 = result
     }
     else if (operator === "X") {
         result = num1 * num2
         console.log(result)
         display.textContent = result
+        tempnum = []
+        num1 = result
         }
     else if (operator === "-") {
         result = num1 - num2
         console.log(result)
         display.textContent = result
+        tempnum = []
+        num1 = result
         }
 
      else if (operator === "%") {
@@ -117,6 +123,8 @@ function operate() {
             result = num1 / num2
             console.log(result)
             display.textContent = result
+            tempnum = []
+            num1 = result
             }
             else {
                 display.textContent = "You no math so good?"
@@ -124,18 +132,10 @@ function operate() {
             }
 
     else {
-        if ((num1 == 0 & num2 == 0)) {
-            display.textContent = "0"
-            result = 0
-        }
-        else if (operator === " ") {
-            result = 0
+        if (num1 === undefined || num1 === null) return;
+
         }
     }
-
-    tempnum = []
-    num1 = result
-}
 
 const clearnow = document.querySelector("#clear")
 clearnow.addEventListener("click", clear)
