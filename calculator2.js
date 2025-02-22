@@ -9,17 +9,17 @@ display.textContent = 0
 
 const one = document.querySelector("#one")
 one.addEventListener('click', (event) => {
-    display.textContent += one.innerHTML
     tempnum.push(1)
-    
+    display.textContent = tempnum.join("")
+
     console.log(tempnum),
     (event)
 })
 
 const two = document.querySelector("#two")
 two.addEventListener('click', (event) => {
-    display.textContent += two.innerHTML
     tempnum.push(2)
+    display.textContent = tempnum.join("")
     console.log(tempnum),
     (event)
 })
@@ -30,11 +30,13 @@ plus.addEventListener('click', (event) => {
     operator = "+"
     if (num1 == 0) {
     num1 = parseInt(tempnum.join(""))
+    tempnum = []
     }
     else {
         num2 = parseInt(tempnum.join(""))
+        tempnum = []
     }
-    tempnum = []
+    
     console.log(num1),
     (event)
 })
@@ -58,6 +60,17 @@ function operate() {
     tempnum = []
     num1 = result
 }
+
+// function clear() {
+//     num1 = 0
+//     num2 = 0
+//     display = 0
+//     combine = 0
+//     tempnum1 = []
+//     currentoperator = " "
+//     console.log(display)
+
+// }
 
 
 
